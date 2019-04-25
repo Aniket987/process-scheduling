@@ -7,6 +7,7 @@ struct process
 	int priority;
 	int waitTime;
 };
+
 int total_time,burst_time=0; 
 int total=-1,i=-1; 
 struct process queue[100],result[100],swap;
