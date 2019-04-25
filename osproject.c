@@ -7,7 +7,6 @@ struct process
 	int priority;
 	int waitTime;
 };
-
 int total_time,burst_time=0; 
 int total=-1,i=-1; 
 struct process queue[100],result[100],swap;
@@ -30,7 +29,6 @@ void execute()
 			queue[0].priority++;
 			queue[0].arrivalTime=total_time+1;
 			total_time++;
-			
 			for(wait=1;wait<=total;wait++)
 			{
 				queue[wait].priority+=2;
@@ -86,6 +84,7 @@ void main()
 		pcreate[l].priority=0;
 		pcreate[l].waitTime=0;
 		burst_time=burst_time+pcreate[l].burstTime;
+		
 	}
 	for(l=0;l<n;l++)
 	{
